@@ -15,4 +15,12 @@ export class MovieApiServiceService {
       `${this.baseurl}/trending/all/week?api_key=${this.apikey}`
     );
   }
+
+  //trendingmovieapidata
+
+  trendingMovieApiData(): Observable<any> {
+    return this.http.get(
+      `${this.baseurl}/trending/movie/day?api_key=${this.apikey}`
+    );
+  }
 }
